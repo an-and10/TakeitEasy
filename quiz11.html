@@ -1,0 +1,267 @@
+<DOCTYPE html>
+<html>
+<style>
+body{background-color: orange
+	; background-size: 100%;
+	background-attachment: relative;
+	}
+p{
+	color:red;
+
+	font-size: 150%;
+	font-family:cursive;
+}
+.in{
+	font size:100%;
+	border:3px hotpink;
+	font-family: arial;
+	border-style: solid;
+	background-color: rgba(1,1,1,1);
+	padding:0.7vh;
+	color:white;
+	
+}
+h2
+{
+	font size:70%;
+	 color:black;
+}
+sub { font-size: 100%;
+ 	border-radius: 20PX: 
+	border:8px ;
+	color:indigo;
+	border-style:double;background-color: rgba(0,0,0,0.5);
+	margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+	}
+button {
+		color:black;
+		font-size:200%;
+		background-color:red;
+		border-style:dotted;
+		border:3px solid blue;
+
+	}
+	h3
+	{
+		font size:250%;
+		color:green;
+		font-family:comic sans Ms HEAder;
+	}
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+}
+h1
+{
+	font-size: 150%;
+}
+
+li {
+    float: right;
+}
+.header{
+    background-color:white;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    font-size: 150%;
+    font-color: blue;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration:none;
+    border:5px solid white;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+.question{
+
+	background-color: springgreen;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question2{
+	background-color: #ee82ee;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question3{
+	background-color: yellow;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+
+}
+
+
+</style>
+<body>
+   <center> <div class="header" align="center">TIME REMAINING TO END THE QUIZ:   <span id="timer">03:00</span>  minutes!</div></center>
+</body>
+    <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();   
+
+setTimeout(function(){
+    	document.getElementById("btn").click()
+    },180000);
+}
+countdown(3);
+</script>
+</div>
+<body>
+	<br>
+	<br>
+	<br>
+
+<center>
+	<h3>WELCOME IN MARVEL CINEMATICS UNIVERSE</h3>
+</center>
+
+	<form  method="post" action="quiz111.php" >
+	<div class="question">
+		<p>Q.1. "Some believe that before the universe, there was nothing. They're wrong. There was darkness... and it has survived." Who said this?<h1>
+		</p>
+		<h1>
+		<input type="radio" name="answer1" value="a"> ODIN<br>
+		<input type="radio" name="answer1" value="b"> LOKI<br>
+		<input type="radio" name="answer1" value="c"> MALEKITH<br>
+		<input type="radio" name="answer1" value="d"> OTHERS<br></h1>
+	</div><br><br>
+		<div class="question2">
+		<p>Q.2. What did Agent Coulson Collect in "THE AVENGERS" ?</p>
+		<h1>
+		<input type="radio" name="answer2" value="a"> TOYS<br>
+		<input type="radio" name="answer2" value="b"> COMICS<br>
+		<input type="radio" name="answer2" value="c"> TRADING CARDS<br>
+		<input type="radio" name="answer2" value="d"> STATUES<br></h1></div><br><br>
+
+				<div class="question3">
+		<p>Q.3. At the end of "Spider-Man: Homecoming",who finds out that Peter is Spinder-Man ?</p>
+		<h1>
+		<input type="radio" name="answer3" value="a"> FLASH THOMPSON<br>
+		<input type="radio" name="answer3" value="b"> MICHELLE JONES<br>
+		<input type="radio" name="answer3" value="c"> LIZ ALLEN<br>
+		<input type="radio" name="answer3" value="d"> AUNT MAY<br></h1></div><br><br>
+		
+<div class="question">
+		<p>Q.4. In which of these films did the character of Nick fury have the most screen time><h1>
+		<input type="radio" name="answer4" value="a"> IRON MAN<br>
+		<input type="radio" name="answer4" value="b"> THOR: THE DARK WORLD<br>
+		<input type="radio" name="answer4" value="c"> WINTER SOLDIER<br>
+		<input type="radio" name="answer4" value="d"> THE INCREDIBLE HULK<br></h1>
+		
+	</div><br><br>
+<div class="question2">
+		<p>Q.5. Where is the HYDRA base that is attacked at the beginning of "AVENGERRS:Age of Ultron"?<br>
+		<input type="radio" name="answer5" value="a"> WAKANDA<br>
+		<input type="radio" name="answer5" value="b"> SOKOVIA<br>
+		<input type="radio" name="answer5" value="c"> SEOUL<br>
+		<input type="radio" name="answer5" value="d"> MADRIPOOR<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.6. Pepper Potts get a promotion in "Iron man 2".what's her new gig??</p><h1>
+		<input type="radio" name="answer6" value="a"> CEO OF STARK INDUSTRIES<br>
+		<input type="radio" name="answer6" value="b"> LEVEL 16 S.H.E.L.D<br>
+		<input type="radio" name="answer6" value="c"> CDO OF STARK INDUSTRIES<br>
+		<input type="radio" name="answer6" value="d"> MRS.TONY STARK<br></h1></div><br><br>
+<div class="question">
+		<p>Q.7. What were Alexender Pierce's last words in "THE WINTER SOLDIER" ? </p><h1>
+		<input type="radio" name="answer7" value="a"> GODDAMN <br>
+		<input type="radio" name="answer7" value="b"> SCREW YOU,NICK <br>
+		<input type="radio" name="answer7" value="c"> NO. <br>
+		<input type="radio" name="answer7" value="d"> HAIL HYDRA<br></h1></div><br><br>
+<div class="question2">
+		<p>Q.8.  In "Guardians of Galaxy vol-2",what does Rocket steal from the sovereign ? </p><h1>
+		<input type="radio" name="answer8" value="a"> CREDITS<br>
+		<input type="radio" name="answer8" value="b"> BATTERIES<br>
+		<input type="radio" name="answer8" value="c"> FABREGE EGG<br>
+		<input type="radio" name="answer8" value="d"> DARK ETHER<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.9. What is the name of Hank Pym's daughter, played by Evangeline Lilly, in Ant-Man? </p><h1>
+		<input type="radio" name="answer9" value="a"> HOPE CROSS<br>
+		<input type="radio" name="answer9" value="b"> HOPE VAN DYNE<br>
+		<input type="radio" name="answer9" value="c"> HOPE VAN PYM<br>
+		<input type="radio" name="answer9" value="d"> HOPE LANG<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.10.Tony Stark does NOT use which of these when describing himself ?  </p><h1>
+		<input type="radio" name="answer10" value="a"> PHILANTHROPIST<br>
+		<input type="radio" name="answer10" value="b"> PLAYBOY<br>
+		<input type="radio" name="answer10" value="c"> WANDERER<br>
+		<input type="radio" name="answer10" value="d"> GENIUS <br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.11.James Rhodes, Tony Stark's best friend, is known as what when he puts on his suit?</p><h1>
+		<input type="radio" name="answer11" value="a"> WAR MACHINE<br>
+		<input type="radio" name="answer11" value="b"> BULLETSTORM<br>
+		<input type="radio" name="answer11" value="c"> HULK BUSTER<br>
+		<input type="radio" name="answer11" value="d"> MARK 3 <br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.12.What is the name of the fictional reclusive African republic that T'challa, a.k.a Black Panther, hails from?</p><h1>
+		<input type="radio" name="answer12" value="a"> WAKANDA<br>
+		<input type="radio" name="answer12" value="b"> AGGAMETTO<br>
+		<input type="radio" name="answer12" value="c"> TERRA<br>
+		<input type="radio" name="answer12" value="d"> SOKOVIA<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.13.Dr. Stephen Strange protects the New York Sanctum. Where are the other sanctums located?  </p><h1>
+		<input type="radio" name="answer13" value="a"> LONDON & PARIS<br>
+		<input type="radio" name="answer13" value="b"> LONDON & BEJING<br>
+		<input type="radio" name="answer13" value="c"> TOKYU & PARIS<br>
+		<input type="radio" name="answer13" value="d"> LONDON & HONG KONG <br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.14.Which Infinity Stone does Vision have embedded into his forehead?</p><h1>
+		<input type="radio" name="answer14" value="a"> THE SOUL STONE<br>
+		<input type="radio" name="answer14" value="b"> THE MIND STOME<br>
+		<input type="radio" name="answer14" value="c"> THE TIME STONE<br>
+		<input type="radio" name="answer14" value="d"> THE SPACE STONE <br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.15.What is Peter Quill a.k.a Star Lord's ship called in Guardians of the Galaxy?  </p><h1>
+		<input type="radio" name="answer15" value="a"> THE NOVA<br>
+		<input type="radio" name="answer15" value="b"> THE KLYN<br>
+		<input type="radio" name="answer15" value="c"> THE MILANO<br>
+		<input type="radio" name="answer15" value="d"> THE KNOWHERE<br></h1></div><br><br>
+
+		 <center> <button type="submit" id="btn">SUBMIT</button></center>
+	</form>
+	<script>
+		
+</script>
+</body>
+</html>

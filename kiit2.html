@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CRICKET QUIZ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body{ background-color: black;background-size: 100%;
+  background-attachment: fixed}
+  .topnav
+{
+  overflow: hidden;
+    background-color: navy;
+}
+div.gallery {
+  color:black;
+    margin: 15px;
+    border: 4px solid black;
+    float: left;
+    width: 180px;
+}
+div.disc{
+  padding:27px;
+  text-align: center;
+}
+div.disc2{
+  padding:18px;
+  text-align: center;
+}
+
+div.gallery:hover {
+    border: 4px solid red;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    padding:1px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+div.tert{
+  padding:20px;
+  text-align:center;
+}
+div.tert1{
+  padding:6px;
+  text-align:center;
+
+}
+
+table.td{
+  padding:100px;
+}
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+.topnav a{
+    color: transparent;
+    float: left;
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}
+
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+.topnav a:hover {
+    background-color: black;
+    color: white;
+}
+p{
+  color:white;
+  font-family: arial;
+  font-size: 120%;
+}
+.in{
+  font size:100%;
+  border:3px hotpink;
+  font-family: arial;
+  border-style: solid;
+  background-color: rgba(1,1,1,1);
+  padding:2vh;
+  color:white;
+  
+}
+p{
+  color:black;
+  font-family: arial;
+  font-size: 100%;
+
+}
+h2
+{
+  font size:100%;
+   color:black;
+   font-family:jokerman;
+}
+.anand {
+  border-radius: 20PX;
+  border width: 50px ;
+   border-color:indigo;
+  border-style:dotted;background-color: rgba(0,0,0,0.5);
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-right: 650px;
+    margin-left: 50px;
+  }
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+  float :left;
+    width: 100px ;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+.container {
+    padding: 10px;
+}
+
+span.psw {
+    float: right;
+   
+}
+  h3
+  {
+    font size:150%;
+    color:black;
+    font-family:comic sans Ms HEAder;
+  }
+ 
+.imgcontainer {
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+}
+table{
+  border-collapse:collapse;
+  width:90%;
+}
+td{ padding:10px; }
+
+img.avatar {
+    width: 10%;
+    border-radius: 10%;
+}
+.hero{
+  color:white;
+  font-size: 40%;
+  background-color:orange;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+.column {
+    float: left;
+    width: 100%;
+    padding: 50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width:300px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="topnav">
+        <a href="index.html">HOME</a>
+        <a href="http://m.cricbuzz.com">LIVE SCORE</a>
+        <a href="http://www.icc-cricket.com">ICC RANKING</a>
+        <a href='http://www.kiit.ac.in'>CONTACT US </a>
+        <a href='rough2.html' style="float:right">SIGN UP </a>
+      </div>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="cric1.jpg" alt="AUSTRALIA" style="width:100%; ">
+        <div class="carousel-caption">
+          <h3>INDIA</h3>
+          <p>WINNER OF 1983 AMD 2011</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="cric2.jpg" alt="india" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>SRI LANKA</h3>
+          <p>WINNER PF 1996</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="cric3.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>PAKISTAN</h3>
+          <p>WINNER OF 1992</p>
+        </div>
+      </div>
+      <div class="item">
+        <img src="17.jpg" alt="india" style="width:100%;">
+        <div class="carousel-caption">
+          <H3>AUSTRALIA</H3>
+          <P>
+            WINNER OF 1987,2003,2007 AND 2015
+        </div>
+      </div>
+    <div class="item">
+        <img src="cric5.jpg" alt="india" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>INDIES</h3>
+          <p>CHAMPION OF T20 CRICKET IN 2014</p>
+        </div>
+      </div>
+    
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<center>
+</center>
+  <body  style="background-color:greenyellow";>
+     <h3>SOME GREAT MEMORIES AND CLOSE ENCOUNTER OF WORLD CRICKET        Scroll down-->></h3>
+<div class="gallery">
+  <a target="_blank" href="https://www.youtube.com/5aPJZKy5rGU">
+    <img src="t20wcup2010.jpg"width="600" height="400">
+  </a>
+  <div class="desc">ICC T20 WORLD CUP 2010 FINAL</div>
+</div> 
+
+
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/usggseiK7f0">
+    <img src="zip2015.jpg"width="600" height="400">
+  </a>
+  <div class="desc">ICC WORLD CIUP 2015 FINAL</div>
+</div>
+<div class="gallery">
+
+  <a target="_blank" href="https://youtu.be/yF64PK57Gr8">
+    <img src="zip200750.jpg" width="600" height="400p" >
+  </a>
+  <div class="desc">ICC WORLD CUP 2007 FINAL</div>
+</div>
+
+<div class="gallery">
+
+  <a target="_blank" href="http://youtu.be/3GjxUn5rN0g">
+    <img src="zip200720.jpg" width="600" height="430p" >
+  </a>
+  <div class="disc">ICC T20 WORLD CUP 2007 FINAL</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/yF64PK57Gr8">
+    <img src="zip2009.jpg"width="600" height="400">
+  </a>
+  <div class="disc2">ICC T20 WORLD CUP 2009 FINAL</div>
+</div>
+<TABLE>
+  <tr>
+    <td>
+<center>
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/kZOX2fZ84ec">
+    <img src="iccchampion2013.jpg"width="600" height="400">
+  </a>
+  <div class="tert1">ICC CHAMPIONS TROPHY 2013 FINAL</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/n4IEqXWtcTI">
+    <img src="cric1.jpg"width="600" height="400">
+  </a>
+  <div class="tert">ICC WORLD CUP 2011 FINAL</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/uM8Daz98yCM">
+    <img src="cric5.jpg"width="600" height="400">
+  </a>
+  <div class="tert">2013 T20 WORLD CUP FINAL</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="https://youtu.be/zgJ22wo8CGo">
+    <img src="cric3.jpg"width="600" height="400">
+  </a>
+  <div class="tert">1992 WORLD CUP FINAL</div>
+</div>
+
+
+</center>
+
+</td></tr></TABLE>
+</center>
+</center>
+<center>
+   <div class="column">
+      <h2>:RULES:</h2>
+      <p>THIS IS A QUIZ CONTEST WEBSITE<BR>
+          KINDLY REGISTER WITH YOUR VALID EMAIL ID AND PLAY AN EXCITING QUIZ ON YOUR FAVOURTE SPORTS<BR>
+  
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2018 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.</p>
+</div>
+
+
+
+</body>
+</html>

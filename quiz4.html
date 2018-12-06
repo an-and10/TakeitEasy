@@ -1,0 +1,262 @@
+<DOCTYPE html>
+<html>
+<style>
+body{background-color: #01ff70;
+	; background-size: 100%;
+	background-attachment: relative;
+	}
+p{
+	color:black;
+	font-family: cursive;
+	font-size: 170%;
+}
+.in{
+	font size:100%;
+	border:3px hotpink;
+	font-family: arial;
+	border-style: solid;
+	background-color: rgba(1,1,1,1);
+	padding:0.7vh;
+	color:white;
+	
+}
+h2
+{
+	font size:70%;
+	 color:black;
+}
+sub { font-size: 100%;
+ 	border-radius: 20PX: 
+	border:8px ;
+	color:indigo;
+	border-style:double;background-color: rgba(0,0,0,0.5);
+	margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+	}
+button {
+		color:black;
+		font-size:200%;
+		background-color:red;
+		border-style:dotted;
+		border:3px solid blue;
+
+	}
+	h3
+	{
+		font size:100px;
+		color:red;
+		font-family:comic sans Ms HEAder;
+	}
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+}
+h1
+{
+	font-size: 130%;
+}
+
+li {
+    float: right;
+}
+.header{
+    background-color:white;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    font-size: 150%;
+    font-color: blue;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration:none;
+    border:5px solid white;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+.question{
+
+	background-color:#F012BE;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question2{
+	background-color: #0074D9;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question3{
+	background-color:#FF3300;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+
+}
+
+
+</style>
+<body>
+   <center> <div class="header" align="center">TIME REMAINING TO END THE QUIZ:   <span id="timer">03:00</span>  minutes!</div></center>
+</body>
+    <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();   
+    setTimeout(function(){
+    	document.getElementById("btn").click()
+    },180000);
+}
+countdown(3);
+</script>
+</div>
+<body>
+	<br>
+	<br>
+	<br>
+
+<center>
+	<h3>WELCOME IN ANIME WORLD</h3>
+</center>
+
+	<form  method="post" action="quiz4.php" >
+	<div class="question">
+		<p>Q.1. What killed Ichigo's mother in "Bleach"?
+		<br>
+		<h1>
+		<input type="radio" name="answer1" value="a">  QUINCY<br>
+		<input type="radio" name="answer1" value="b">  SHINIGAMI<br>
+		<input type="radio" name="answer1" value="c">  HOLLOW<br>
+		<input type="radio" name="answer1" value="d">  CAR ACCIDENT</h1><br></div><br><br>
+	
+		<div class="question2">
+		<p>Q.2 In the seconmd episode of "Sword Art Online",what was kiriti branded as? <br><h1>
+		<input type="radio" name="answer2" value="a"> A BEATER<br>
+		<input type="radio" name="answer2" value="b"> A SWORD MASTER<br>
+		<input type="radio" name="answer2" value="c"> A NOOB<br>
+		<input type="radio" name="answer2" value="d"> A CHEATER<br></h1></div><br><br></p>
+
+		<div class="question3">
+		<p>Q.3. What does the Shinigami Ryuk enjoying eating in "Death Note"?<br><h1>
+		<input type="radio" name="answer3" value="a"> POTATO CHIPS<br>
+		<input type="radio" name="answer3" value="b"> BONES<br>
+		<input type="radio" name="answer3" value="c"> PIZZA<br>
+		<input type="radio" name="answer3" value="d"> APPLES<br></h1></div><br><br>
+		
+<div class="question">
+		<p>Q.4. In "Fullmetal Alcemist",who become the youngest state Alchemist in history at the age of 12?<br><h1>
+		<input type="radio" name="answer4" value="a"> ROY MUSTANG<br>
+		<input type="radio" name="answer4" value="b"> EDWARD ELRIC<br>
+		<input type="radio" name="answer4" value="c"> VAN HOHENHEIM<br>
+		<input type="radio" name="answer4" value="d"> ALPHONSE ELRIC<br></h1>
+		
+	</div><br><br>
+<div class="question2">
+		<p>Q.5. Who was the only person able to counter Sasuke's Genjutsu without using outside intervention or Genjutsu?<br><h1>
+		<input type="radio" name="answer5" value="a"> ITACHI<br>
+		<input type="radio" name="answer5" value="b"> KAKASHI<br>
+		<input type="radio" name="answer5" value="c"> NARUTO<br>
+		<input type="radio" name="answer5" value="d"> DEIDARA<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.6. What do the Survey Corps in Attack on Titian do?<br><h1>
+		<input type="radio" name="answer6" value="a"> ACTIVITLY STUDY AND FIGHT THE TITANS<br>
+		<input type="radio" name="answer6" value="b"> PROVIDE THE FOOD<br>
+		<input type="radio" name="answer6" value="c"> TRAIN THE MILITARY<br>
+		<input type="radio" name="answer6" value="d"> TEACH HUMANITY <br></h1></div><br><br>
+<div class="question">
+		<p>Q.7.What did Light tell Ryuk before he relinquished ownership of his death note? </br><h1>
+		<input type="radio" name="answer7" value="a"> "DESTROY THE NOTEBOOK" <br>
+		<input type="radio" name="answer7" value="b"> "GET RID OF IT"<br>
+		<input type="radio" name="answer7" value="c"> "GIVE IT TO MISA"<br>
+		<input type="radio" name="answer7" value="d"> "I RELINQUISH OWERSHIP<br></h1></div><br><br>
+<div class="question2">
+		<p>Q.8. What is the reason why Gon took the hunter's exam? <br><h1>
+		<input type="radio" name="answer8" value="a"> TO OUTDO KILLUA<br>
+		<input type="radio" name="answer8" value="b"> HE LIKES TO HUNT<br>
+		<input type="radio" name="answer8" value="c"> T0 FIND HIS FATHER<br>
+		<input type="radio" name="answer8" value="d"> TO FIND LOVE<br></div><br><br>
+<div class="question3">
+		<p>Q.9 What is the second ship, made by Franky, named?<br><h1>
+		<input type="radio" name="answer9" value="a"> SUNFLOWER <br>
+		<input type="radio" name="answer9" value="b"> BOLLION SUNNY<br>
+		<input type="radio" name="answer9" value="c"> LION'S PRIDE<BR>
+		<input type="radio" name="answer9" value="d"> THOUSAND SUNNY<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.10.Where did Misa Amane first find Light in Death Note?</br><h1>
+		<input type="radio" name="answer10" value="a"> TOKYA DOME<br>
+		<input type="radio" name="answer10" value="b"> SPACELAND<br>
+		<input type="radio" name="answer10" value="c"> SHIWIA<br>
+		<input type="radio" name="answer10" value="d"> AYOAMA<br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.11.Which of these characters from Fairy Tail did not have Telepathy? <br><h1>
+		<input type="radio" name="answer11" value="a"> EVE<br>
+		<input type="radio" name="answer11" value="b"> HIBIKI<br>
+		<input type="radio" name="answer11" value="c"> SIMON<br>
+		<input type="radio" name="answer11" value="d"> WARREN<br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.12. Where did titans come from in Attack on Titian? <br><h1>
+		<input type="radio" name="answer12" value="a"> THE MILITARY<br>
+		<input type="radio" name="answer12" value="b">  MYSTERY(NO ONE KNOWS)<br>
+		<input type="radio" name="answer12" value="c"> EVOLUTION<br>
+		<input type="radio" name="answer12" value="d"> MAD SCIENTIST<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.13.Eren Yeager has a burning passion to kill something, but what exactly is it? <br><h1>
+		<input type="radio" name="answer13" value="a">  FAIRY TAIL GUILD MEMEBER.<br>
+		<input type="radio" name="answer13" value="b"> TITANS<br>
+		<input type="radio" name="answer13" value="c"> GHOULS<br>
+		<input type="radio" name="answer13" value="d"> PHANTHOMS <br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.14. Who was Naruto's teacher at the ninja academy? </br><h1>
+		<input type="radio" name="answer14" value="a"> KAKASHI<br>
+		<input type="radio" name="answer14" value="b"> IRUKA<br>
+		<input type="radio" name="answer14" value="c"> SARUTOBI<br>
+		<input type="radio" name="answer14" value="d"> JIRAIYA<br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.15.Who was the first ninja to be attacked by Naruto's Rasengan-Shuriken?? <br><h1>
+		<input type="radio" name="answer15" value="a"> KAKUZE<br>
+		<input type="radio" name="answer15" value="b"> SASUKE<br>
+		<input type="radio" name="answer15" value="c"> PEIN<br>
+		<input type="radio" name="answer15" value="d"> ORACHIMARU<br></h1></div><br><br>
+
+		 <center> <button type="submit" id="btn">SUBMIT</button></center>
+	</form>
+	
+</script>
+</body>
+</html>

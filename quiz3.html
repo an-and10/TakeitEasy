@@ -1,0 +1,262 @@
+<DOCTYPE html>
+<html>
+<style>
+body{background-color: #01ff70;
+	; background-size: 100%;
+	background-attachment: relative;
+	}
+p{
+	color:black;
+	font-family: cursive;
+	font-size: 170%;
+}
+.in{
+	font size:100%;
+	border:3px hotpink;
+	font-family: arial;
+	border-style: solid;
+	background-color: rgba(1,1,1,1);
+	padding:0.7vh;
+	color:white;
+	
+}
+h2
+{
+	font size:70%;
+	 color:black;
+}
+sub { font-size: 100%;
+ 	border-radius: 20PX: 
+	border:8px ;
+	color:indigo;
+	border-style:double;background-color: rgba(0,0,0,0.5);
+	margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+	}
+button {
+		color:black;
+		font-size:200%;
+		background-color:red;
+		border-style:dotted;
+		border:3px solid blue;
+
+	}
+	h3
+	{
+		font size:100px;
+		color:red;
+		font-family:comic sans Ms HEAder;
+	}
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+}
+h1
+{
+	font-size: 130%;
+}
+
+li {
+    float: right;
+}
+.header{
+    background-color:white;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    font-size: 150%;
+    font-color: blue;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration:none;
+    border:5px solid white;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+.question{
+
+	background-color:#F012BE;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question2{
+	background-color: #0074D9;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question3{
+	background-color:#FF3300;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+
+}
+
+
+</style>
+<body>
+   <center> <div class="header" align="center">TIME REMAINING TO END THE QUIZ:   <span id="timer">03:00</span>  minutes!</div></center>
+</body>
+    <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick(); 
+    setTimeout(function(){
+    	document.getElementById("btn").click()
+    },180000);
+}  
+countdown(3);
+</script>
+</div>
+<body>
+	<br>
+	<br>
+	<br>
+
+<center>
+	<h3>WELCOME IN GLORY OF FOOTBALL</h3>
+</center>
+
+	<form  method="post" action="quiz3.php" >
+	<div class="question">
+		<p>Q.1. Phileas Fogg stopped off in what is now Mumbai on his voyage around the world, but at which club in the city did Nicolas Anelka start his managerial journey?
+		<br>
+		<h1>
+		<input type="radio" name="answer1" value="a"> MUMBAI UNITED<br>
+		<input type="radio" name="answer1" value="b"> MUMBAI CITY<br>
+		<input type="radio" name="answer1" value="c"> MUMBAI TIGHERS<br>
+		<input type="radio" name="answer1" value="d"> BENGAL MUMBAI FC</h1><br></div><br><br>
+	
+		<div class="question2">
+		<p>Q.2. All four home nations- England, Scotland, Wales and Northern Ireland - played at the 1958 World Cup. Where did it take place?<br><h1>
+		<input type="radio" name="answer2" value="a"> BRAZIL<br>
+		<input type="radio" name="answer2" value="b"> AFRICA<br>
+		<input type="radio" name="answer2" value="c"> SWEDAN<br>
+		<input type="radio" name="answer2" value="d"> FRANCE<br></h1></div><br><br></p>
+
+		<div class="question3">
+		<p>Q.3. Northern Ireland will be making their European Championship debut this summer. Who was their top scorer in qualifying? <br><h1>
+		<input type="radio" name="answer3" value="a"> JONNY EVANS<br>
+		<input type="radio" name="answer3" value="b"> CHRIS BRUNT<br>
+		<input type="radio" name="answer3" value="c"> STEVE DAVIS<br>
+		<input type="radio" name="answer3" value="d"> KLYE LAFFERTY<br></h1></div><br><br>
+		
+<div class="question">
+		<p>Q.4. Eibar made their debut in La Liga in 2014. Which current Premier League player had a brief spell with the club?<br><h1>
+		<input type="radio" name="answer4" value="a"> DAVID SILVA<br>
+		<input type="radio" name="answer4" value="b"> JESUS NEVAS<br>
+		<input type="radio" name="answer4" value="c"> AYOZE PERZE<br>
+		<input type="radio" name="answer4" value="d"> CESIER AZPILICUTEA<<br></h1>
+		
+	</div><br><br>
+<div class="question2">
+		<p>Q.5. In whic year did the FIFA world cup began?<br><h1>
+		<input type="radio" name="answer5" value="a"> 1930<br>
+		<input type="radio" name="answer5" value="b"> 1908<br>
+		<input type="radio" name="answer5" value="c"> 1926<br>
+		<input type="radio" name="answer5" value="d"> 1922<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.6. what major historical event prevented two FIFA World cup tournament from being held?<br><h1>
+		<input type="radio" name="answer6" value="a"> VIETNAM  WAR<br>
+		<input type="radio" name="answer6" value="b"> 1969 MOON LANDING<br>
+		<input type="radio" name="answer6" value="c"> 1941 ATTACK ON PEARL HARBOUR<br>
+		<input type="radio" name="answer6" value="d"> THE WORLD WAR 2<br></h1></div><br><br>
+<div class="question">
+		<p>Q.7. Who won the FIFA World cup held in 2006? </br><h1>
+		<input type="radio" name="answer7" value="a"> ITALY <br>
+		<input type="radio" name="answer7" value="b"> BRAZIL<br>
+		<input type="radio" name="answer7" value="c"> GERMANY <br>
+		<input type="radio" name="answer7" value="d"> MEXICO<br></h1></div><br><br>
+<div class="question2">
+		<p>Q.8. When was the last time the World cup was held in united states? <br><h1>
+		<input type="radio" name="answer8" value="a"> 1950<br>
+		<input type="radio" name="answer8" value="b"> 1978<br>
+		<input type="radio" name="answer8" value="c"> 1994<br>
+		<input type="radio" name="answer8" value="d"> 1998<br></div><br><br>
+<div class="question3">
+		<p>Q.9. What is the best standing the Uninted states has ever earned in the World cup? <br><h1>
+		<input type="radio" name="answer9" value="a"> FIRST PLACE<br>
+		<input type="radio" name="answer9" value="b"> SECOND PLACE<br>
+		<input type="radio" name="answer9" value="c"> THIRD PLACE<br>
+		<input type="radio" name="answer9" value="d"> TWELFTH PLACE<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.10. Which nation won the world cup in 1930 ?</br><h1>
+		<input type="radio" name="answer10" value="a"> URUGUAY<br>
+		<input type="radio" name="answer10" value="b"> BRAZIL<br>
+		<input type="radio" name="answer10" value="c"> ITALY<br>
+		<input type="radio" name="answer10" value="d"> ARGENTINA<br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.11.How old was Pele  when he made his world cup debut for Brazil? <br><h1>
+		<input type="radio" name="answer11" value="a"> 16<br>
+		<input type="radio" name="answer11" value="b"> 17<br>
+		<input type="radio" name="answer11" value="c"> 18<br>
+		<input type="radio" name="answer11" value="d"> 19 <br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.12.Mexico stepped in to host the 1986 World cup instead of whom?  <br><h1>
+		<input type="radio" name="answer12" value="a"> COLOMBIA<br>
+		<input type="radio" name="answer12" value="b"> PARAGUAY<br>
+		<input type="radio" name="answer12" value="c"> CHILE<br>
+		<input type="radio" name="answer12" value="d"> ARGENTINA<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.13. Who scored a World cup record of five goal in one game against Cameroon in USA 1994? <br><h1>
+		<input type="radio" name="answer13" value="a"> HRISTO STOICHKOV<br>
+		<input type="radio" name="answer13" value="b"> OLEG SALENKO<br>
+		<input type="radio" name="answer13" value="c"> ROMARIO<br>
+		<input type="radio" name="answer13" value="d"> ROBERTO BAGGIO <br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.14. Who was the first team to qualify for 2014 World cup excluding brazil? </br><h1>
+		<input type="radio" name="answer14" value="a"> AUSTRALIA<br>
+		<input type="radio" name="answer14" value="b"> JAPAN<br>
+		<input type="radio" name="answer14" value="c"> IRAN<br>
+		<input type="radio" name="answer14" value="d"> NETHERLAND<br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.15.Who was the only nation to remain unbeaten throughout the 2010 World cup ? <br><h1>
+		<input type="radio" name="answer15" value="a"> SPAIN<br>
+		<input type="radio" name="answer15" value="b"> SLOVAKIA<br>
+		<input type="radio" name="answer15" value="c"> NEW ZELAND<br>
+		<input type="radio" name="answer15" value="d"> GERMANY<br></h1></div><br><br>
+
+		 <center> <button type="submit" id="btn">SUBMIT</button></center>
+	</form>
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+
+<nav>
+	<img src="logo.jpg" id="logo">
+</nav>
+
+<style>
+h1{
+    font-size: 200%;
+    color:red;
+}
+/* Global Styling */
+html, body {margin:0px; padding: 0px;
+background:radial-gradient(circle,green,lightyellow,navy,pink);
+background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+overflow-x:hidden}}
+
+nav {
+    background:radial-gradient(yellow,red,blue);
+    	position: fixed;
+		width: 100vw;
+		top: 0;
+		z-index: 0;
+}
+#text{
+	height:50px; color:radial-gradient(circle,yellow,green);
+    font-family: cursive;
+    font-size: 20px;
+}
+#logo {height: 40px; width:120px; margin-left: 00px;
+cursor:pointer;}
+
+.wrapper {
+    padding: 40px 40px;
+    max-width: 1200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+		margin-top: 80px;
+}
+
+.right {float: right !important;}
+/* Image zoom on hover + Overlay colour */
+.parent {
+    width: 45%;
+    margin: 20px;
+    height: 300px;
+    border: 2px solid blue;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+	cursor: pointer;
+	border-radius:10%;
+
+
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 1.0s;
+    -moz-transition: all 1.0s;
+    -o-transition: all 1.0s;
+    transition: all 1.0s;
+}
+
+/* Several different images */
+.bg-one {background-image: url(new1_full.jpg);}
+.bg-two {background-image: url(new_full.jpg);}
+.bg-three {background-image: url(imagesft.jpg);}
+.bg-four {background-image: url(anim1_full.jpg);}
+
+
+a {
+    display: none;
+    font-size: 25px;
+    color: yellow !important;
+    font-family:  'PT Mono', monospace;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    cursor: pointer;
+    text-shadow: 0vh 0vh 0vh #000;
+
+}
+
+.parent:hover .child, .parent:focus .child {
+    -ms-transform: scale(2.0);
+    -moz-transform: scale(2.0);
+    -webkit-transform: scale(122);
+    -o-transform: scale(2.0);
+    transform: scale(2.0);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover a, .parent:focus a {
+    display: block;
+}
+
+.child:before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,73,94,0.75);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1080px) {
+    .parent {width: 95%; height: 30%; margin: 20px 20px}
+		.wrapper {padding: 30px 30px;}
+}
+
+
+
+
+.hello {display: none}
+</style>
+
+<div class="wrapper">
+	<div class="parent" onclick="">
+		<div class="child bg-one">
+			<a href="kiit111.html">M A R V E L<BR>
+				C I N E M A T I C S<BR>U N I V E R S E</a>
+		</div>
+	</div>
+
+	<div class="parent right" onclick="">
+		<div class="child bg-two">
+			<a href="kiit2.html">C R I C K E T </a>
+		</div>
+	</div>
+
+	<div class="parent" onclick="">
+		<div class="child bg-three">
+			<a href="kiit3.html">F O O T B A L L </a>
+		</div>
+	</div>
+
+	<div class="parent right" onclick="">
+		<div class="child bg-four">
+			<a href="kiit44.html">A N I M E</a>
+		</div>
+	</div>
+</div>
+<nav id="text" style="float:right">
+	<h2> <center> T  A  K  E  I T  E   A  S   Y  </center> </h2></nav>
+      <center>  <h1>SELECT ANY ONE!</h1></center>
+
+      <div id="displayScore"></div>
+
+ 
+ <script type="text/javascript" src="http://json-cricket.appspot.com/score.json?callback=getReply"></script>
+</body></html>

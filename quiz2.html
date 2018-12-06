@@ -1,0 +1,260 @@
+<DOCTYPE html>
+<html>
+<style>
+body{background:radial-gradient(circle,green,yellow,blue,red);
+	}
+p{
+	color:red;
+	font-family: cursive;
+	font-size: 150%;
+}
+.in{
+	font size:100%;
+	border:3px hotpink;
+	font-family: arial;
+	border-style: solid;
+	background-color: rgba(1,1,1,1);
+	padding:0.7vh;
+	color:white;
+	
+}
+h2
+{
+	font size:70%;
+	 color:black;
+}
+sub { font-size: 100%;
+ 	border-radius: 20PX: 
+	border:8px ;
+	color:indigo;
+	border-style:double;background-color: rgba(0,0,0,0.5);
+	margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+	}
+button {
+		color:black;
+		font-size:200%;
+		background-color:springgreen;
+		border-style:dotted;
+		border:3px solid blue;
+
+	}
+	h3
+	{
+		font size:250%;
+		color:green;
+		font-family:comic sans Ms HEAder;
+	}
+	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.2);
+}
+h1
+{
+	font-size: 150%;
+}
+
+li {
+    float: right;
+}
+.header{
+    background-color:white;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    font-size: 150%;
+    font-color: blue;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    text-decoration:none;
+    border:5px solid white;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+.question{
+
+	background-color: aqua;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question2{
+	background-color: greenyellow;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+}
+.question3{
+	background-color: maroon;
+    padding: 28px;
+    text-align: left;
+    font-size: 100%;
+    color:black;
+
+}
+
+
+</style>
+<body>
+   <center> <div class="header" align="center">TIME REMAINING TO END THE QUIZ:   <span id="timer">03:00</span>  minutes!</div></center>
+</body>
+    <script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();   
+    setTimeout(function(){
+    	document.getElementById("btn").click()
+    },0);
+}
+countdown(0);
+</script>
+</div>
+<body>
+	<br>
+	<br>
+	<br>
+
+<center>
+	<h3>WELCOME IN  THE JOURNEY OF CRICKET</h3>
+</center>
+
+	<form  method="post" action="quiz2.php" >
+	<div class="question">
+		<p>Q.1.  Which flamboyant umpire from New zeland gives batsmen out with a bent index finger due to arthristis?
+		</p>
+		<h1>
+		<input type="radio" name="answer1" value="a"> Steve Davis<br>
+		<input type="radio" name="answer1" value="b"> Daryl Harper<br>
+		<input type="radio" name="answer1" value="c"> Billy Bowden<br>
+		<input type="radio" name="answer1" value="d"> Tony Hill<br></h1>
+	</div><br><br>
+		<div class="question2">
+		<p>Q.2. The world's top cricketers were auctioned off for the DLF Indian Premier League in Mumbai on February 20, 2008. Which cricketer attracted the highest price ? </p>
+		<h1>
+		<input type="radio" name="answer2" value="a"> Sachin Tendulkar<br>
+		<input type="radio" name="answer2" value="b"> Mahendra Sign Dhoni<br>
+		<input type="radio" name="answer2" value="c"> Sourav Ganguly<br>
+		<input type="radio" name="answer2" value="d"> Yuvraj Singh<br></h1></div><br><br>
+
+		<div class="question3">
+		<p>Q.3. Where did the 1st ODI match was played in India ?<br><h1>
+		<input type="radio" name="answer3" value="a"> Mohali<br>
+		<input type="radio" name="answer3" value="b"> Delhi<br>
+		<input type="radio" name="answer3" value="c"> Ahmedabad<br>
+		<input type="radio" name="answer3" value="d"> Kolkata<br></h1></div><br><br>
+		
+<div class="question">
+		<p>Q.4. The cricketer who became the brand Ambassador of 'Indigo Nation' is  </p><h1>
+		<input type="radio" name="answer4" value="a"> Sachin Tendulkar<br>
+		<input type="radio" name="answer4" value="b"> Mahendra Singh Dhoni<br>
+		<input type="radio" name="answer4" value="c"> Anil kumble<br>
+		<input type="radio" name="answer4" value="d"> Sourav Ganguly<br></h1>
+		
+	</div><br><br>
+<div class="question2">
+		<p>Q.5. The highest wicket taker in test matches is now ?</p><h1>
+		<input type="radio" name="answer5" value="a"> Shane Warne<br>
+		<input type="radio" name="answer5" value="b"> Muthia Murlidharan<br>
+		<input type="radio" name="answer5" value="c"> Brett Lee<br>
+		<input type="radio" name="answer5" value="d"> Dannis Liee<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.6. Who scored the most runs in a single First class innings ?</p><h1>
+		<input type="radio" name="answer6" value="a"> Vinod Kambli<br>
+		<input type="radio" name="answer6" value="b"> Sachin Tendulakr<br>
+		<input type="radio" name="answer6" value="c"> Don brandman<br>
+		<input type="radio" name="answer6" value="d"> Brian lara<br></h1></div><br><br>
+<div class="question">
+		<p>Q.7. Who is the first cricket player from Kerala to make a test debut ? </p><h1>
+		<input type="radio" name="answer7" value="a"> T. Krishnan <br>
+		<input type="radio" name="answer7" value="b"> T. S. Shekar <br>
+		<input type="radio" name="answer7" value="c"> T. Yohannan <br>
+		<input type="radio" name="answer7" value="d"> R. Somasunder<br></h1></div><br><br>
+<div class="question2">
+		<p>Q.8.  Who is the latest Indian to have joined the ranks of those who have achieved the distinction of having scored a century on their debut in a test match? </p><h1>
+		<input type="radio" name="answer8" value="a"> Azaharuddin  <br>
+		<input type="radio" name="answer8" value="b"> Gavaskar <br>
+		<input type="radio" name="answer8" value="c"> Sehwag <br>
+		<input type="radio" name="answer8" value="d"> Tendulkar<br></h1></div><br><br>
+<div class="question3">
+		<p>Q.9. Which was the 1st non Test playing country to beat India in an international match ? </p><H1>
+		<input type="radio" name="answer9" value="a"> Srilanka<br>
+		<input type="radio" name="answer9" value="b"> Pakistan<br>
+		<input type="radio" name="answer9" value="c"> Canada<br>
+		<input type="radio" name="answer9" value="d"> Bangladesh<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.10. Who won the Deodhar Trophy Cricket played in Mumbai on March 9, 2010 ?  </p><h1>
+		<input type="radio" name="answer10" value="a"> North Zone <br>
+		<input type="radio" name="answer10" value="b"> West Zone <br>
+		<input type="radio" name="answer10" value="c"> South Zone <br>
+		<input type="radio" name="answer10" value="d"> East Zone <br></h1></div><br><br>
+<div class="question2">
+		<p>Q.11. Where did india play its first one day International match ? </p><h1>
+		<input type="radio" name="answer11" value="a"> Lords<br>
+		<input type="radio" name="answer11" value="b"> The Oval <br>
+		<input type="radio" name="answer11" value="c"> Headingley <br>
+		<input type="radio" name="answer11" value="d"> Trent Bridge <br></h1></div><br>
+		<div class="question3">
+		<p>Q.12. The highest first wicket Partership in  Test match was between two indian's.One is V.Mankad,who is another? </p><h1>
+		<input type="radio" name="answer12" value="a"> Pankaj Roy <br>
+		<input type="radio" name="answer12" value="b"> Sunil Gavaskar <br>
+		<input type="radio" name="answer12" value="c"> Chetan Chauhan <br>
+		<input type="radio" name="answer12" value="d"> Scahin Tendulakr<br></h1></div><br><br>
+		<div class="question">
+		<p>Q.13. Who was the first captain of indian Test team ?  </p><h1>
+		<input type="radio" name="answer13" value="a"> Vijay hazare<br>
+		<input type="radio" name="answer13" value="b"> C.K.Nayadu <br>
+		<input type="radio" name="answer13" value="c"> Lala Amarnath <br>
+		<input type="radio" name="answer13" value="d"> Vinod Mankad <br></h1></div><br><br>
+		<div class="question2">
+		<p>Q.14. Who was the first ODI captain of india ?  </p><h1>
+		<input type="radio" name="answer14" value="a"> Ajit Wadekar <br>
+		<input type="radio" name="answer14" value="b"> Nawab Pataudi <br>
+		<input type="radio" name="answer14" value="c"> Lala Amarnath <br>
+		<input type="radio" name="answer14" value="d"> Vijay Merchant <br></h1></div><br><br>
+		<div class="question3">
+		<p>Q.15. When was the first cricket Test match played ?  </p><h1>
+		<input type="radio" name="answer15" value="a"> 1872 <br>
+		<input type="radio" name="answer15" value="b"> 1879 <br>
+		<input type="radio" name="answer15" value="c"> 1877 <br>
+		<input type="radio" name="answer15" value="d"> 1907 <br></h1></div><br><br>
+		 <center> <button type="submit" id="btn">SUBMIT</button></center>
+	</form>
+	
+</body>
+
+</html>
